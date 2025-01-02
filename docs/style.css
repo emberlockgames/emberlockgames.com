@@ -61,6 +61,12 @@ h2 {
 	text-shadow: 2px 2px 4px #000000;
 }
 
+blockquote {
+	font-size: 110%;
+	padding: 0.5em;
+	background-color: #10101080;
+}
+
 div.contentPanel {
 	background-color: #00000099;
 	padding: 1rem 1.5rem;
