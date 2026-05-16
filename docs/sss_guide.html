@@ -9,21 +9,341 @@
 	</head>
 	<body>
 		<div class="page">
-<div class="header">
- 	<a href="index.html"><img src="img/emberlockgames-short.png" alt="Emberlock Games" /></a>
- </div>
- 
- <div class="navigationBar">
+			<div class="header">
+				<a href="index.html"><img src="img/emberlockgames-short.png" alt="Emberlock Games" width="880" height="114" /></a>
+			</div>
+			<div class="pageContent">
+<div class="navigationBar mainNav stickyTopNav">
  	<ul>
  		<li><a href="about.html">About</a></li>
  		<li><a href="games.html">Games</a></li>
  	</ul>
  </div>
-<h1>SSS Guide</h1>
-<p>Future home of SSS gameplay documentation and help</p>
+<h1 id="headNum0">Solar Scavenge Squad </h1>
+<blockquote class='warning'>
+<p><strong>Alpha Content</strong></p>
+<p>The game is in Alpha; so is the documentation.</p>
+<p>Everything in the game, and everything documented here, is subject to change with future versions of the game.</p>
+<p>This documentation may contain mistakes and inaccuracies, and is poorly edited. Please send constructive critism and documentation requests to <a href="mailto:sssguidefeedback@emberlockgames.com">sssguidefeedback@emberlockgames.com</a></p>
+</blockquote>
+<div id="tableOfContents">
+	<ol class="tableOfContentsList">
+	<li><a href="#headNum1">Guide: Getting Into a Game</a>
+<ol class="tocLI tocL3">
+	<li><a href="#headNum2">1-to-Six Players</a></li>
+	<li><a href="#headNum3">Joining a Game</a></li>
+	<li><a href="#headNum4">Creating a Game</a>
+<ol class="tocLI tocL4">
+	<li><a href="#headNum5">Use an Available Server</a></li>
+	<li><a href="#headNum6">Start Your Own Server</a></li>
+	<li><a href="#headNum7">Controlling Access</a>
+</ol>
+</ol></li>
+	<li><a href="#headNum8">Guide: Game Room & Setup</a>
+<ol class="tocLI tocL3">
+	<li><a href="#headNum9">Ship and Enemy Configuration</a>
+</ol></li>
+	<li><a href="#headNum10">Guide: Game Table & Play</a>
+<ol class="tocLI tocL3">
+	<li><a href="#headNum11">Turns</a></li>
+	<li><a href="#headNum12">The Ship</a>
+<ol class="tocLI tocL4">
+	<li><a href="#headNum13">Player Actions and Movement</a>
+</ol></li>
+	<li><a href="#headNum14">Enemies</a></li>
+	<li><a href="#headNum15">Player Cards</a>
+<ol class="tocLI tocL4">
+	<li><a href="#headNum16">Combat Cards</a></li>
+	<li><a href="#headNum17">Star Cards</a></li>
+	<li><a href="#headNum18">Wound Cards</a>
+</ol></li>
+	<li><a href="#headNum19">Loot</a></li>
+	<li><a href="#headNum20">Combat</a>
+<ol class="tocLI tocL4">
+	<li><a href="#headNum21">Combat Won</a></li>
+	<li><a href="#headNum22">Combat Tied</a></li>
+	<li><a href="#headNum23">Combat Lost</a>
+</ol></li>
+	<li><a href="#headNum24">The Treasure</a></li>
+	<li><a href="#headNum25">Victory / Defeat</a>
+</ol></li>
+	<li><a href="#headNum26">Themes: Ship and Enemy types</a>
+<ol class="tocLI tocL3">
+	<li><a href="#headNum27">Bodyn</a></li>
+	<li><a href="#headNum28">Earthen Empire</a></li>
+	<li><a href="#headNum29">Squatters</a>
+</ol></li>
+	<li><a href="#headNum30">Technical Manual</a>
+<ol class="tocLI tocL3">
+	<li><a href="#headNum31">Installing the Alpha</a></li>
+	<li><a href="#headNum32">User Data Directory</a></li>
+	<li><a href="#headNum33">Hosting</a></li>	</ol>
+</div>
 
+<h2 id="headNum1">Guide: Getting Into a Game</h2>
+<h3 id="headNum2">1-to-Six Players</h3>
+<p>This game supports one-to-six players, all playing co-operatively against self-controlled enemies who spawn in (1-per-player) each round.</p>
+<p>A single-player game is mechanically identical to a multi-player game. You will need to create your own game (as opposed to joining an open game, see below), and running your own local server (not available in Alpha 😓) is recommended.</p>
+<p>For a multiplayer game with strangers, join an open game if one exists, or create your own (and remember to make it public) and wait until players join and Ready-up.</p>
+<blockquote class='warning'>
+<p><strong>For the Alpha Release, there is no in-game communication</strong>, so you will have no in-game means to coordinate or discuss with your teammates. For this reason, it is recommended that you play either single player or with friends in the the way described next, and use a separate group chat/call system to communicate during the game.</p>
+</blockquote>
+<p>For a private multiplayer game, create your own game and set a known password. Or join a specific game, and provide the password you've been given.</p>
+<p>For LAN games, create a game on your own server, make it public, and share your IP and port. Or from Join Game manually add their IP and port.</p>
+<p>For dedicated hosting, Win/Linux executables and a container image will be available with the full release.</p>
+<h3 id="headNum3">Joining a Game</h3>
+<ol>
+<li>From the game's main menu, select Join Game
+<li>Wait up to a few seconds for games to be populated
+<li>If the/a game you want to join is listed, click the Join Game button in that row (if a password is required, you will be prompted to enter it)
+</ol>
+<p>After joining a game, you will be taken to the Game Room for game and player setup. See the appropriate Guide below for more.</p>
+<div class="galleryImage">
+ 	<a href="img/sss/screenshot/joinGame-gameIsAvailable.webp" target="_blank" rel="noopener noreferrer">
+ 		<img src="img/sss/screenshot/joinGame-gameIsAvailable-small.webp" alt="Screenshot of the Create Game menu" width="1024" height="576" />
+ 	</a>
+ </div>
+<p>In some situations (e.g. LAN gaming) you may know the address of a server and want to add it directly. Do so at the bottom of the screen, and that server will be remembered and checked when looking for servers/games in the future (you can remove it on the Create Game screen). If any games are running on that server (and it is reachable), they will be listed in the table.</p>
+<p>If no suitable game is available, consider creating your own...</p>
+<h3 id="headNum4">Creating a Game</h3>
+<p>There are two ways to create your own game: use a server that's already running somewhere and has capacity to run another game, or start your own server and communicate with it.</p>
+<h4 id="headNum5">Use an Available Server</h4>
+<ol>
+<li>From the game's main menu, select <strong>Create Game</strong>
+<li>Wait a few seconds for servers to be populated
+<li>If the/a server you want to use is listed, compatible, and has capacity: click the <strong>Create Game</strong> button in that row (if a password is required, you will be prompted to enter it)
+</ol>
+<div class="galleryImage">
+ 	<a href="img/sss/screenshot/createGame-remoteIsAvailable.webp" target="_blank" rel="noopener noreferrer">
+ 		<img src="img/sss/screenshot/createGame-remoteIsAvailable-small.webp" alt="Screenshot of the Create Game menu" width="1024" height="576" />
+ 	</a>
+ </div>
+<h4 id="headNum6">Start Your Own Server</h4>
+<blockquote class='warning'>
+<p>This is disabled for the Alpha release. For now please use an official server (see the <code>Use an Available Server</code> section above). Contact <a href="mailto:gameservers@emberlockgames.com">gameservers@emberlockgames.com</a> if you cannot find an official server with capacity to start a game.</p>
+</blockquote>
+<ol>
+<li>From the game's main menu, select <code>Create Game</code>
+<li>Specify a different hostname/address and port number, if desired
+<li>Click <code>Start Server</code>
+</ol>
+<p>A new window will open in the background: this is your local server, and it will be listening for requests coming to your computer for the address and port that was specified. While you play a game hosted locally, it will remember all of the game state and approve all of your moves; closing the window will immediately end/erase all games started on your server. </p>
+<h4 id="headNum7">Controlling Access</h4>
+<p>After creating a game, you will be taken to the Game Room for game- and player-setup; The game will initially allow multiple players, but require a password (which can be set to a consistent value in the options, or by default will auto-generate a random password for each game). To make the game public, remove the password.</p>
+<div class="gallery">
+ 		
+ 	<div class="galleryImage">
+ 		<img src="img/sss/screenshot/gameConfig_access.webp" alt="Private" />
+ 	</div>
+ 	
+ 	<div class="galleryImage">
+ 		<img src="img/sss/screenshot/gameConfig_accessPublic.webp" alt="Public" />
+ 	</div>
+ 	
+ </div>
+
+<h2 id="headNum8">Guide: Game Room & Setup</h2>
+<blockquote>
+<p>Your source for these deep-space scans is reliable, and you <em>should</em> have a head start, if you can get a squad assembled and dispatched <em>now</em>.</p>
+<p>Just a few extra hands, reliable-enough for this lone contract. More unique weirdos on the crew means more tricks for getting out trouble, but it always seems to bring so much more attention and trouble...</p>
+<p>Maybe you should head out alone, and try to sneak in quietly on this one...</p>
+</blockquote>
+<p>All games start in a <em>Game Room</em>, where the admin (the first player to join) can set game configuration and rules, including the maximum number of players allowed in the game, and if a password is required to join. By leaving these to their defaults after creating a new game, you will have a single-player game.</p>
+<div class="galleryImage">
+ 	<a href="img/sss/screenshot/gameRoom.webp" target="_blank" rel="noopener noreferrer">
+ 		<img src="img/sss/screenshot/gameRoom-small.webp" alt="Screenshot of the Game Room interface" width="1024" height="576" />
+ 	</a>
+ </div>
+<p>Each player can set their own configuration, identifying themself with a name and color, and choosing a character class. The character class will change passive and active (using star cards) attributes and abilities, as well as your representation in the game.</p>
+<p>Each player has a toggle button to indicate when they are Ready for the game to begin. The Game cannot be started until all players are Ready. Once all players have indicated they are Ready, <strong>any</strong> player can start the game by pressing the Start Game button.</p>
+<blockquote class='warning'>
+<p>If needed, the admin player can kick any player</p>
+</blockquote>
+<h3 id="headNum9">Ship and Enemy Configuration</h3>
+<p>Each game takes place on an abandoned ship, which can be from one of several space-faring solar groups. The configured <em>ship theme</em> changes the selection logic for the rooms of the ship.</p>
+<p>Separately, the <em>enemy theme</em> configuration sets the opposition coming to face you on that ship, and will control the combat strength and bonuses of the enemies which spawn in each round.</p>
+<blockquote class='warning'>
+<p>Which themes are available is determined by the server, see below for the official alpha-release Themes, this will be further customizable per-server in later releases.</p>
+</blockquote>
+<h2 id="headNum10">Guide: Game Table & Play</h2>
+<blockquote>
+<p>The floating derelict has been positively identified by your rented scavenging craft, and appears to have been completely abandonded. Your squad prepares for their excursion in the breaching pod as the ship's computer calculates an ideal entry site for accessing the lost ship's vault.</p>
+<p>You find your harness and strap yourself in, and suddenly the pod detaches.</p>
+<p>As your squad's breaching pod accelerates towards the wreck, its short-range sensors reveal that an enemy faction has just arrived, perhaps after the same treasure, or perhaps just using the ship as bait.</p>
+</blockquote>
+<p>After a game has started, it moves to a <em>Game Table</em>, where the derelict ship is laid out and player tokens move about, encountering enemy cards dealt onto rooms decided by a D6 roll. Players take turns performing actions, such as moving from room-to-room within the ship, and attacking the enemies which spawn each round.</p>
+<div class="galleryImage">
+ 	<a href="img/sss/screenshot/gameTable.webp" target="_blank" rel="noopener noreferrer">
+ 		<img src="img/sss/screenshot/gameTable-small.webp" alt="Screenshot of the Game Table menu" width="1024" height="576" />
+ 	</a>
+ </div>
+<h3 id="headNum11">Turns</h3>
+<p>A game run takes place over multiple rounds until the objective is completed and all players are either safe or defeated. Each round consists of the following phases in sequence:</p>
+<ol>
+<li>Players' turns, one at a time, in order
+<li>Enemies attack
+<li>Enemies spawn
+<li>Players resupply
+</ol>
+<p>Players may only perform actions when it is their turn, but may need to defend themselves during the enemy attack phase.</p>
+<h3 id="headNum12">The Ship</h3>
+<p>The ship is represented by 6 main rooms in a line, plus your breaching craft at the left end (all players start here), and the vault room at the right end (the treasure starts here). </p>
+<p>The interior rooms are D6-addressable, with a die roll of <code>1</code> being the room closest to your craft, and a roll of <code>6</code> being the room closest to the vault. (The breaching craft and the vault are the un-rollable rooms #0 and #7, respectively.)</p>
+<p>Ships are generally unknown, and each of the six rooms start concealed and will be revealed when any player first enters it. The game's configured Ship Theme determines the set of potential rooms which each room of the ship can be randomly drawn from at game start. </p>
+<blockquote>
+<p>Earthen Empire ships all use consistent, well-documented designs. From a distance their hulls are indistinct, but as soon as we breach we'll know which of their 6 doctrine fits we've found, and what it's room layout is.</p>
+<p>Bodyn ships have more variety, but they all follow a pattern. The first room is always tough, and the sixth room is a relief. You won't find "biological" rooms either.</p>
+<p>Squatters? They'll weld together anything they can get their hands on. You never know what the next room could be.</p>
+</blockquote>
+<h4 id="headNum13">Player Actions and Movement</h4>
+<p>Each round during the resupply phase, each player receives 2 Action Points to use during their turn that round. </p>
+<p>One Action Point can be spent to do any of the following:</p>
+<ul>
+<li><strong>Move</strong> - Move to an adjacent room. Impossible if there are any enemies in the room with you.
+<li><strong>Attack</strong> - Use (discard) cards from your hand to attack an enemy in the same room as you.
+<li><strong>⭐ Ability</strong> - Discard a Star Card from your hand to perform your character's special out-of-combat ability
+<li><strong>Pick Up</strong> - If the treasure is sitting in the current room, begin carrying it
+</ul>
+<p>When carrying the treasure you will be able to perform a free <strong>Drop</strong> action during your turn.</p>
+<p>Any action can be performed twice (for both Action Points) on the same turn if the conditions still apply, other than the final action to <strong>Skip Turn</strong>, which immediately ends the player's turn even if used as the first action.</p>
+<h3 id="headNum14">Enemies</h3>
+<p>Enemies are represented by cards which are initially shuffled, and then dealt into the game during the enemy respawn phase. </p>
+<p>If the enemy draw deck is ever emptied, all discarded (defeated) enemies are shuffled and returned to the deck. During every Enemy Spawn turn in the game (after any existing enemies attack), a D6 is rolled for each player (even defeated ones), and the next enemy card is placed in the corresponding room.</p>
+<p>Enemies are identified by their Risk, a simple indicator of their relative danger (usually 1-3), with a higher value being a stronger, more-dangerous foe. The details of each risk level are determined by the game's enemies configuration. An enemy's Risk is only known once it's been seen, and any enemy which spawns into an un-occupied room will have an Unknown Risk level ("level zero") until a player enters the room.</p>
+<h3 id="headNum15">Player Cards</h3>
+<p>Player health and capability is represented with a hand of 5 cards, plus a face-down draw stack and a face-up discard pile (which is shuffled back into the draw whenever needed). </p>
+<div class="galleryImage">
+ 	<img src="img/sss/screenshot/gameTable_playerHand.webp" alt="Screenshot of the player's hand of cards" width="779" height="276" />
+ </div>
+<p>At the end of each round, during the Resupply phase, all players will draw additional cards as needed to get back up to 5 in their hand. Cards are discarded only when used, <strong>not</strong> automatically at the end of a turn.</p>
+<h4 id="headNum16">Combat Cards</h4>
+<p>The bulk of a player's initial deck are Combat Cards, with an ⚔ Attack and a 🛡 Defense value on them. </p>
+<p>The Attack:Defense values on a card  are balanced around a mid-point, so a single card will be either evenly mediocre at both attack and defense, slightly better at one and slightly worse at the other, or very good at one and very bad at the other.</p>
+<p>When a player chooses to attack an enemy in the same room, they will then choose combat cards to play, and the sum of those cards' <em>attack</em> value will be used.</p>
+<p>During the Enemy Turn, each enemy in a room with a player will attack, and a player will need to defend against it. That defending player will choose combat cards to play, and the sum of those cards' <em>defense</em> value will be used.</p>
+<h4 id="headNum17">Star Cards</h4>
+<p>Special player cards which allow the player to do one of two (depending on the context) things when discarded/played, determined by the character class chosen during game setup.</p>
+<p>When played outside of combat, performs your character class's Star Ability, which may require additional choices.</p>
+<p>When played during combat, applies your character class's Star Attack effect(s).</p>
+<h4 id="headNum18">Wound Cards</h4>
+<p>Players can gain wounds from various sources during a game, which are represented by cards added into their deck. Once drawn into the players hand, all cards can only be discarded by being used (such as in combat), but Wound cards have no use and can only be discarded by using some character or room abilities.</p>
+<blockquote class='warning'>
+<p>If a player ever has a full hand of five wound cards: their character is defeated, and they are immediately removed from the game. <br />If they were carrying anything, it is dropped where they were. Any negative effects created by their presence (i.e. enemy spawning) remain in the game.</p>
+</blockquote>
+<h3 id="headNum19">Loot</h3>
+<p>Some enemies (by Risk number, per the game's enemies configuration; generally The Stronger Ones), room effects, and character abilities will reward players with Loot, which are additional player cards that can be chosen from a few displayed options. Combat loot cards are better than the cards in a player's starting deck.</p>
+<p>The available loot options rotate and are replenished routinely, but can be exhausted. </p>
+<div class="galleryImage">
+ 	<img src="img/sss/screenshot/gameTable_loot.webp" alt="Screenshot of the loot area of the game table" width="646" height="288" />
+ </div>
+<h3 id="headNum20">Combat</h3>
+<p>Combat occurs between a player and an enemy in the same room.</p>
+<p>During a player's turn, they may use 1 Action to attack an enemy in the same room (picking the specific enemy if there are multiple). This is an <em>Attack</em>, and the sum of ⚔ attack values on played combat cards will be used, along with any attack-specific passive or star attack effects.</p>
+<p>During the enemy's turn, if able, each enemy will attack 1 player in the same room as them. If there are multiple players in the room, the players vote to select the defender. This is a <em>Defense</em>, and the sum of 🛡 defense values on played combat cards will be used, along with any defense-specific passive or star attack effects.</p>
+<p>The player will choose which, if any, cards to play from their hand. Combat cards will contribute directly to their overall score, and star cards will contribute their character-specific star attack effects. Wound cards cannot be played in combat.</p>
+<p>When the player has chosen their cards, the enemy rolls any dice they get (usually one D6 per Risk level), and then the results are tallied.</p>
+<p>Any room, character, or other passive effects are applied for the attacker or defender, along with the player's cards' sum, and enemy's dice sum. Whoever has the higher score wins.</p>
+<p>Unless otherwise noted, any enemy D6 roll of <code>6</code> deals critical damage, and immediately adds a wounds to the top of your draw stack.</p>
+<h4 id="headNum21">Combat Won</h4>
+<blockquote>
+<p>Congratulations! You defeated <em>an</em> enemy.</p>
+</blockquote>
+<ul>
+<li>The enemy is removed from the room.
+<li>If any loot is rewarded for that enemy, the player selects it now from the available pool. 
+<li>Any used player cards are discarded.
+</ul>
+<h4 id="headNum22">Combat Tied</h4>
+<blockquote>
+<p>Having ended up on opposite sides of the room, you both pause to reload and mend wounds, glaring at each other.</p>
+</blockquote>
+<ul>
+<li>The enemy remains.
+<li>The player gains (to their discard) a wound.
+<li>Any used player cards are discarded.
+</ul>
+<h4 id="headNum23">Combat Lost</h4>
+<blockquote>
+<p>A fine thrashing has left you humbled, and also <strong>severely wounded</strong>!</p>
+</blockquote>
+<ul>
+<li>The enemy remains.
+<li>The player adds (to their <em>draw</em> stack) a wound.
+<li>Any used player cards are discarded.
+</ul>
+<h3 id="headNum24">The Treasure</h3>
+<p>The treasure begins every game in the ship's Vault, at the other end from your breaching craft. Get to it, pick it up, and get it to the entry to win.</p>
+<p>Any player can spend 1 Action to pick up the treasure, and will then carry it with them room-to-room. They can drop the treasure at any time, allowing another player to pick it up. If a player dies while carrying the treasure, it will drop in that room.</p>
+<blockquote class='warning'>
+<p>Victory is achieved as soon as the treasure enters the breaching pod.</p>
+</blockquote>
+<p>A multiplayer game will continue on after the treasure has entered the pod, until the treasure <strong>and</strong> all the <em>surviving</em> players are in the breaching pod, to fully grade the results.</p>
+<h3 id="headNum25">Victory / Defeat</h3>
+<p>When all players are either defeated or in the pod with the treasure, the game ends. </p>
+<p>If the treasure is <strong>not</strong> in the pod then, the mission is a <strong>failure</strong>. Otherwise...</p>
+<p>If few, if any, of your squad survived, it was a <strong>success</strong>.</p>
+<p>If most of your squad survived, <strong>victory</strong> was achieved.</p>
+<p>If your entire squad made it out, then the mission was <strong>perfect</strong>.</p>
+<h2 id="headNum26">Themes: Ship and Enemy types</h2>
+<p>Each game will feature one Ship Type (for the type of derelict wreck you're scavenging) and one Enemy Type (for the type of opponent continually arriving at the craft), which are selected in the game room. </p>
+<p>The themes available will depend on the server the game is being hosted on, and may include options in addition (i.e. through mod) to the official Alpha Roster:</p>
+<h3 id="headNum27">Bodyn</h3>
+<blockquote>
+<p>"A friendlier face for a friendly auto'mate!" blares the advertisement, echoing off the empty concrete cavern, hollow and devoid of any company workers at this hour. Still, the series of routinely-placed at-irregular-spacing screens bathe the space in a perfectly-engineering glow of prismatic light, shifting gently as the screens showed off the company's latest, "HomeOfficeR robot assistants! Combining Bodyn Corporation's industry-leading excellence in Corporobot and ZNaaarg^ for Peopls with their latest cutting-edge innovations of its HouseHeld consumer line of synthetic automation..."</p>
+<p>Robobts manufactured by the Bodyn corporation; humanity's most-prolific and most-profitable autonomous robot manufacturer, with a highly debated and secretive level of sentience and self-awareness in their most advanced robots. In the lawless depths of space, well-founded rumors claim that Bodyn has established multiple independent research stations, from which officially unaffiliated "test ships" engage in maneuvers near wrecks and hapless explorers, and rumors indicate that Bodyn is developing close-quarters combat 'bots. To date, Bodyn has denounced all reports as simply jealous slander.</p>
+</blockquote>
+<p>Privateer robots, predictable but formidable.</p>
+<p>Enemies: A moderate threat level with no RNG critical-hit wounds</p>
+<p>Ships: Predictable patterns in the type of room</p>
+<h3 id="headNum28">Earthen Empire</h3>
+<blockquote>
+<p>Dozens of decades of oppression and decline eventually broke the grasp of the corporate empires and promised to return control to the populace, but those people suddenly found they didn't know or care how to replace their former masters. More harm, more bloodshed, and yet still a glimmer of law and order grew, feeding off the decay of the old society.</p>
+<p>Control of space assets was re-established early in the regime and used to pacify still-unsettled regions, until all the significant peoples of the world came together in a singular allegiance to the new Earthern Empire. The Empire promised, and delivered, rapid expansion across the solar system, with the whole sliced up into curving cubes half an AU wide orbiting everything.</p>
+<p>Regional authorities are always looking to pad out their reports, and see any attempt at unregistered or under-licensed salvage as a mortal threat to public safety, and prefer to count the bodies later when they're cleaning up.</p>
+</blockquote>
+<p>Fascist thugs; strong baseline, but predictable and lower potential.</p>
+<p>Enemies: Strong opponents with slightly less randomness: all enemies roll one fewer D6 in combat, but always get a +6 bonus</p>
+<p>Ships: The Empire only has 6 ship designs, as soon as the wreck is breached we'll know the full layout</p>
+<h3 id="headNum29">Squatters</h3>
+<blockquote>
+<p>Followers of a near-religious ideology that Possession means Ownership and every man is entitled to whatever he can take and keep.</p>
+<p>When the Empire formed, they were helped into power by a groundswell of supporters across the globe willing to enact great violence upon their neighbors, once given enough approval to do so. Each of these local cells and lone actors had their own motivations, but the Empire attempted to unify them around this ethos of independence and liberty. During the uprising these unaffiliated guerrillas were helpful, but they quickly turned into a nuisance for the Empire once it took over civic responsbilities.</p>
+<p>Most of the surviving guerrillas were happy to leave their homeland once the Empire offered them enough territory on the new frontier. They were promised plots of territory just like those that were being awarded to the most powerful and well-connected, but in fact received the unwanted empty regions left over from the charting system developed for the elites' new ownings. Still, the Empire managed to deceive enough of them, that these inhabitants considered themselves descendents of heroes for generations after, and considered the Empire as some sort of equally-quaint ally who's lucky to have their continued support.</p>
+<p>With each new generation of those that chose to isolate themselves, their prospects grow dimmer and their need greater. Their scanners are often incapable of detecting even nearby wrecks, but they have grown adept at identifying and tracking the trails of incoming salvage craft, which can lead them to two ships for the taking.</p>
+</blockquote>
+<p>Libertarian extremists left alone in the dark too long. Very unpredictable.</p>
+<p>Enemies: As random as possible, D6 rolls of 6 deal an immediate (additional) wound, regardless of the combat outcome</p>
+<p>Ships: As random as possible, any room is possible anywhere</p>
+<h2 id="headNum30">Technical Manual</h2>
+<h3 id="headNum31">Installing the Alpha</h3>
+<p>The game is currently available in a <strong>limited</strong> alpha test! Please <a href="mailto:alphaRequest@emberlockgames.com">contact us</a> to request access.</p>
+<ul>
+<li>Windows: After downloading the <code>.zip</code> file, extract it to any location and run <code>SolarScavengeSquad.exe</code>. 
+</ul>
+<h3 id="headNum32">User Data Directory</h3>
+<p>When the game runs, it will write files (including log files) to your Godot-engine user-data directory:</p>
+<ul>
+<li>Windows: <code>%APPDATA%\Godot\app&#95;userdata\Solar Scavenge Squad</code> <em>(e.g. <code>C:\Users\%USERNAME%\AppData\Roaming\Godot\app&#95;userdata\Solar Scavenge Squad</code>)</em>
+<li>Linux: <code>$HOME/.godot/app&#95;userdata/Solar Scavenge Squad</code>
+</ul>
+<p>This includes:</p>
+<ul>
+<li>Log files (including Game Logs generated in-game, e.g. the save log button in the end-game modal)
+<li>The <code>mods</code> directory and documentation (if the configuration option to maintain the <code>&#95;system</code> mod is enabled (it is not by default), <code>mods/&#95;system</code> will contain an export of all the game assets which can be easily overwritten (or added to) with a similar mod - see <code>mods/readme.md</code> for more)
+<li>User-specific configuration
+</ul>
+<h3 id="headNum33">Hosting</h3>
+<p>All games are always played on a server, even single-player games. This can be a self-hosted local server (ideal for single-player or LAN games), or a remote server (ideal for WAN co-op). </p>
+<p>When creating a new game, you will need to do so on a compatible known server with capacity to host a new game, and the server may be configured with a required password.</p>
+<p>When joining a game, any Open games (games which have been created, with players in the game room; but which haven't been started, the players haven't yet moved to the game table) on known servers will be listed. Each game may be configured with a required password.</p>
+<p>Knowledge of these game servers is either manually added (by entering hostname and port), or discovered through a configured network server (which the game server(s) you're interested in are connected to). When viewing game or server listings in the client, click the <code>Discover</code> button to refresh the list of known servers, in addition to the automatic updating of those servers after discovery.</p>
+<blockquote class='warning'>
+<p>For the Alpha release, the ability to host and distribute servers will be restricted, to limit the scope of the test. From Beta onwards, the game will ship with an integrated game server executable, which will also be available alone as an executable and container. During the Alpha, all games should run on official servers at {something}.emberlockgames.com</p>
+</blockquote>
+
+			</div>
 			<div class="footer">
-				<span>Copyright 2025 <a href="mailto:emberlockgames@proton.me">emberlockgames@proton.me</a></span>
+				<span>Copyright 2026 <a href="mailto:contact@emberlockgames.com">Emberlock Games</a></span>
 			</div>
 		</div>
 	</body>
