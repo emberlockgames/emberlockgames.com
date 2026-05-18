@@ -66,10 +66,6 @@ div.page {
 		div.page div.pageContent p {
 			margin-left: 0.5rem;
 		}
-		
-		div.page div.pageContent .sneaky {
-			color: #000000;
-		}
 
 		div.page div.pageContent .imgLogoParent {
 			display: grid;
@@ -347,8 +343,7 @@ div.credits {
 	}
 
 	blockquote {
-		margin: 0.25em;
-		
+		margin: 0.25em;		
 		transition: margin 0.75s;
 	}
 
@@ -391,27 +386,45 @@ div.credits {
 	}
 	
 	blockquote {
+		background-color: #DEDEDE !important;
 		background-color: #00000098;
 	}
 
 	blockquote.warning {
+		background-color: #2f2f2f !important;
+		border: 2px solid #000;
 		color: #FF9900;
+	}
+	
+	code {
+		color: #02A702;
 	}
 
 	div.page div.pageContent {
-		background-color: #FFFFFF;
+		background-color: #FFF;
+		border: 1rem solid #000;
 	}
-		
-		div.page div.pageContent .sneaky {
-			color: #FFFFFF;
-		}
+	
+	div.navigationBar ul li a {
+		color: #000;
+		background-color: #2b2525;
+		border: solid 1px #480604;
+	}
+
+	div.navigationBar ul li a:active,
+	div.navigationBar ul li a:visited {
+		color: #FA3A06;				
+	}
 	
 	div#tableOfContents {
 		background-color: #65656577;
 	}
 
 	div.mainNav {
-		background-color: #C81604;
+		background-color: #9f908f;
 	}
 
+	div#tableOfContents {
+		background-color: #3b3b3b12;
+	}
 }
